@@ -1,5 +1,3 @@
-// SignupScreen.js
-
 import React from "react";
 import {
   View,
@@ -37,8 +35,6 @@ const SignupScreen = ({ navigation }) => {
     } else if (!/^\S+@\S+\.\S+$/.test(signupEmail)) {
       dispatch(setSignupErrorMessage("Invalid email address."));
     } else {
-      // Save the user data (you can dispatch an action to save it to Redux store or perform an API call)
-      // For now, let's just display the data
       console.log("Username:", signupUsername);
       console.log("Email:", signupEmail);
       console.log("Password:", signupPassword);

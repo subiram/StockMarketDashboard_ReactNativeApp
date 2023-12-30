@@ -36,8 +36,8 @@ const LoginScreen = ({ navigation }) => {
 
     // Check if the credentials and captcha are valid
     if (
-      username === "admin" &&
-      password === "qwerty123"
+      username === "subi" &&
+      password === "mypassword"
     ) {
       // Navigate to the dashboard
       console.log("Authenticated User!");
@@ -52,7 +52,6 @@ const LoginScreen = ({ navigation }) => {
     navigation.navigate("Signup");
   };
 
-  // ... rest of the component
 
   return (
     <View style={styles.container}>
@@ -70,13 +69,7 @@ const LoginScreen = ({ navigation }) => {
           secureTextEntry
           onChangeText={(text) => dispatch(setPassword(text))}
         />
-        {/* <TextInput
-          style={styles.input}
-          placeholder={`Captcha: ${captcha}`}
-          onChangeText={(text) => dispatch(setInputCaptcha(text))}
-          onChange={dispatch(`${captcha}`)}
-        /> */}
-
+       
         <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>

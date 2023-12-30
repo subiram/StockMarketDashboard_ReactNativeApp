@@ -1,5 +1,3 @@
-// DashboardScreen.js
-
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, ActivityIndicator, StyleSheet } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
@@ -16,22 +14,11 @@ const DashboardScreen = ({ navigation }) => {
     fetchMostActiveStocks();
   }, []);
 
-//   const fetchMostActiveStocks = async () => {
-//     try {
-//       const response = await axios.get(
-//         `https://cloud.iexapis.com/stable/stock/market/list/mostactive?token=pk_7e655342b747405697cf291d5ccccebc`
-//       );
-
-//       setMostActiveStocks(response.data);
-//     } catch (error) {
-//       dispatch(setErrorMessage('Error fetching stock data.'));
-//     }
-//   };
 
   const fetchMostActiveStocks = async () => {
     try {
       const response = await axios.get(
-        `https://cloud.iexapis.com/stable/stock/market/list/mostactive?token=pk_7e655342b747405697cf291d5ccccebc`
+        `https://cloud.iexapis.com/stable/stock/market/list/mostactive?token=pk_58b64c13e456411d9558633db43b7400`
       );
 
       setMostActiveStocks(response.data);

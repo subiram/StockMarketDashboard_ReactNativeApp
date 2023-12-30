@@ -20,7 +20,7 @@ const StockDetailScreen = ({ route }) => {
   const fetchStockData = async () => {
     try {
       const response = await axios.get(
-        `https://cloud.iexapis.com/stable/stock/${symbol}/batch?types=quote,news,chart&range=1d&last=10&token=pk_7e655342b747405697cf291d5ccccebc`
+        `https://cloud.iexapis.com/stable/stock/${symbol}/batch?types=quote,news,chart&range=1d&last=10&token=pk_58b64c13e456411d9558633db43b7400`
       );
 
       setStockData(response.data);
@@ -31,24 +31,6 @@ const StockDetailScreen = ({ route }) => {
       setLoading(false);
     }
   };
-
-//   const renderChart = () => {
-//     if (stockData && stockData.chart) {
-//       const chartData = stockData.chart.map((point) => ({ x: point.label, y: point.close }));
-
-//       return (
-//         <AreaChart
-//           style={{ height: 200 }}
-//           data={chartData}
-//           svg={{ fill: 'rgba(134, 65, 244, 0.8)' }}
-//           contentInset={{ top: 20, bottom: 20 }}
-//         >
-//           <Grid />
-//         </AreaChart>
-//       );
-//     }
-//     return null;
-//   };  
 
   const renderChart = () => {
     if (stockData && stockData.chart) {

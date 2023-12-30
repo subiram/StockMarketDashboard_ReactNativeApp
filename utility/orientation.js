@@ -1,5 +1,3 @@
-// orientation.js
-
 import Orientation from 'react-native-orientation';
 
 const lockToPortrait = () => {
